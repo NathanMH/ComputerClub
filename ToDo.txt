@@ -5,3 +5,4 @@ TODO LIST!
    b) Gather relevant info
    c) Choose language
    d) Nathan = figure out C# on linux
+   e) design UI
