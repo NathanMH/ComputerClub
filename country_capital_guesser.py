@@ -7,10 +7,11 @@ countries_capitals = {"Canada": "Ottawa", "United States": "Washington", "France
 playing = 1
 correct_answers = 0
 total_questions = 0
+correct_percent = 0
 
 while playing:
     for key, value in countries_capitals.items():
-        answer = input("Name the capital of: " + key + "\n")
+        answer = input("Name the capital of: " + key + "\n").lower()
         total_questions += 1 # Short for total_questions = total_questions + 1
         
         if answer == countries_capitals[key] or answer.title() == countries_capitals[key]:
@@ -24,6 +25,12 @@ while playing:
     if response.lower() == "no" or response == "n":
         playing = 0
 
+correct_percent = (correct_answers / total_questions) * 100
+print(round(correct_percent, 2))
 print("You scored " + str(correct_answers)+ "/" + str(total_questions))
+
+#if correct_percent >= 80:
+#    print(“:)”)
+
 
     
