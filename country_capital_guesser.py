@@ -26,7 +26,7 @@ while playing:
         playing = 0
 
 correct_percent = (correct_answers / total_questions) * 100
-print(round(correct_percent, 2))
+print(str(round(correct_percent, 1)) + "%")
 print("You scored " + str(correct_answers)+ "/" + str(total_questions))
 
 #if correct_percent >= 80:
