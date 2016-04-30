@@ -22,15 +22,22 @@ while playing:
 
     # Should we keep playing?
     response = input("Would you like to play again?: \n")
-    if response.lower() == "no" or response == "n":
+    if response.lower() == "yes" or response == "y":
+        playing = 1
+    else:
         playing = 0
 
-correct_percent = (correct_answers / total_questions) * 100
-print(str(round(correct_percent, 1)) + "%")
-print("You scored " + str(correct_answers)+ "/" + str(total_questions))
+correct_percent = round(((correct_answers / total_questions) * 100), 2)
+print("You scored " + str(correct_answers)+ "/" + str(total_questions) + " (" + str(correct_percent) + "%)")
 
-#if correct_percent >= 80:
-#    print(“:)”)
+if correct_percent >= 80:
+    print(":D")
+elif correct_percent >= 60:
+    print(":)")
+elif correct_percent >= 40:
+    print(":(")
+else:
+    print(":'(")
 
 
     

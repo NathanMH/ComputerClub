@@ -1,7 +1,7 @@
 TODO LIST!
 
 1. Start "Country Capital Cuiz" game.
-   a) Setup repository on github!
+   a) Done! Setup repository on github!
    b) Gather relevant info
    c) Choose language
    d) Nathan = figure out C# on linux
