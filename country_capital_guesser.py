@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-# This is called a python dictionary. It has keys (Canada, France etc...) and Valuse (Paris, Ottawa)
+# This is called a python dictionary. It has keys (Canada, France etc...) and Values (Paris, Ottawa)
 countries_capitals = {"Canada": "Ottawa", "United States": "Washington", "France": "Paris"}
 
 # The variable "playing" determines if we will play the game. 1 = yes, 0 = no
