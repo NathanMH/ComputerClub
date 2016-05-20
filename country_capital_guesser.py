@@ -55,6 +55,5 @@ def test_1():
         print(":'(")
 
 
-def test_2():
-    ask_to_play()
+ask_to_play()
     
