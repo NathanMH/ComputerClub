@@ -1,9 +1,12 @@
 #! /usr/bin/env python3
 
 import easygui
+import country_list_getter
 
 # This is called a python dictionary. It has keys (Canada, France etc...) and Values (Paris, Ottawa)
-countries_capitals = {"Canada": "Ottawa", "United States": "Washington", "France": "Paris"}
+country_list_getter.main()
+countries_capitals = country_list_getter.final_list
+# countries_capitals = {"Canada": "Ottawa", "United States": "Washington", "France": "Paris"}
 
 def ask_to_play():
     return easygui.ynbox("Do you want to play a game?", "Country Guesser", ("Yes", "No"))
