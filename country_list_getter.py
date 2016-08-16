@@ -15,18 +15,18 @@ import urllib.request
 url = "http://www.manythings.org/vocabulary/lists/2/words.php?f=countries_and_capitals"
 
 
-def make_da_html(url):
+def make_html(url):
     html = urllib.request.Request(url)
     response = urllib.request.urlopen(html)
     return response.read().decode('utf-8')
 
 
-def make_da_soup(html):
+def make_soup(html):
     soup = BeautifulSoup(html, 'html.parser')
     return soup
 
 
-def make_da_list(soup):
+def make_list(soup):
     countries = soup.find_all("b")
     capitals = soup.find_all("i")
 
@@ -43,8 +43,8 @@ def make_da_list(soup):
 ##################
 
 def main():
-    soup = make_da_soup(make_da_html(url))
-    return make_da_list(soup)
+    soup = make_soup(make_html(url))
+    return make_list(soup)
 
 final_list = main()
 ##################
