@@ -1,7 +1,6 @@
 TODO LIST!
 
-1. Start "Country Capital Cuiz" game.
+1. Start "Country Capital Quiz" game.
    a) Refactor with nice formatting (ie. sections)
    b) Gather relevant info
-   c) Nathan = figure out C# on linux
-   d) design UI
+   c) design UI

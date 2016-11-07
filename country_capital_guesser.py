@@ -1,12 +1,29 @@
 #! /usr/bin/env python3
 
+#######################
+"""####################
+Index:
+    1. Imports and Readme
+    2. Functions
+    3. Main
+    4. Testing
+####################"""
+#######################
+
+###################################################################
+# 1. IMPORTS AND README
+###################################################################
+
 import easygui
 import country_list_getter
 
-# This is called a python dictionary. It has keys (Canada, France etc...) and Values (Paris, Ottawa)
+###################################################################
+# 2. FUNCTIONS
+###################################################################
+
+# Dictionary. It has keys (Canada, France etc...) and Values (Paris, Ottawa)
 country_list_getter.main()
-countries_capitals = country_list_getter.final_list
-# countries_capitals = {"Canada": "Ottawa", "United States": "Washington", "France": "Paris"}
+COUNTRIES_CAPITALS = country_list_getter.final_list
 
 def ask_to_play():
     return easygui.ynbox("Do you want to play a game?", "Country Guesser", ("Yes", "No"))
@@ -21,9 +38,10 @@ def ask_to_replay(correct_answers, total_questions):
 def main_question_box(country):
     return easygui.enterbox("What is the capital of: " + country + "?", "Country Capital Guesser!!")
 
-###############################################
-# Main
-###############################################
+
+###################################################################
+# 3. MAIN
+###################################################################
 
 def funtime():
     playing = 1
@@ -31,13 +49,13 @@ def funtime():
     total_questions = 0
     ask_to_play()
     while playing:
-        for key, value in countries_capitals.items():
+        for key, value in COUNTRIES_CAPITALS.items():
             answer = main_question_box(key)
             # answer = input("Name the capital of: " + key + "\n").lower()
             total_questions += 1 # Short for total_questions = total_questions + 1
 
-            if answer == countries_capitals[key] or answer.title() == countries_capitals[key]:
-                correct_answers += 1 
+            if answer == COUNTRIES_CAPITALS[key] or answer.title() == COUNTRIES_CAPITALS[key]:
+                correct_answers += 1
                 print("Correct!")
             else:
                 print("Wrong!")
@@ -53,13 +71,16 @@ def funtime():
     ask_to_replay(correct_answers, total_questions)
     #print("You scored " + str(correct_answers)+ "/" + str(total_questions) + " (" + str(correct_percent) + "%)")
 
-###############################################
-# Testing
-###############################################
+
+###################################################################
+# 4. TESTING
+###################################################################
+
+# COUNTRIES_CAPITALS = {"Canada": "Ottawa", "United States": "Washington", "France": "Paris"}
 
 def test_1():
     pass
 # ask_to_play()
 # main_question_box("Canada")
-    
+
 funtime()
