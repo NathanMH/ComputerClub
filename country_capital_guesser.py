@@ -23,7 +23,7 @@ import country_list_getter
 
 # Dictionary. It has keys (Canada, France etc...) and Values (Paris, Ottawa)
 country_list_getter.main()
-COUNTRIES_CAPITALS = country_list_getter.final_list
+COUNTRIES_CAPITALS = country_list_getter.FINAL_LIST
 
 def ask_to_play():
     return easygui.ynbox("Do you want to play a game?", "Country Guesser", ("Yes", "No"))
